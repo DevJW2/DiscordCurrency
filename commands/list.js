@@ -20,7 +20,7 @@ async function list(message, args, doc){
             serverSize = true; 
             rows.forEach(row => {
                 if(row.id !== undefined){
-                    msg += "name: " + row.User + ", value: " + row.Currency + "\n";
+                    msg += "Name: " + row.User + ", Amount: " + row.Currency + "\n";
                 }
             });
         }
@@ -49,7 +49,7 @@ async function list(message, args, doc){
     }
     
 
-    return message.author.send(serverSize ? msg : {embed: userEmbed})
+    return message.author.send(serverSize ? msg : {embed: userEmbed}, serverSize ? {split: true} : null)
         .then(() => {
             if (message.channel.type === 'dm') return;
             message.reply('I\'ve sent you a DM!');
