@@ -4,6 +4,9 @@ async function list(message, args, doc){
     const sheet = doc.sheetsByIndex[0];
     const rows = await sheet.getRows(); 
 
+    let serverSize = false; 
+    let msg = "";
+
     let userEmbed = {
         color: 0x98ff98,
         title: 'Bank', 
@@ -13,15 +16,25 @@ async function list(message, args, doc){
 
     if(args === "all"){    
         //Get all the users
-        rows.forEach(row => {
-            if(row.id !== undefined){
-                userEmbed.fields.push({
-                    name: row.User, 
-                    value: row.Currency,
-                    inline: true
-                })
-            }
-        });
+        if(rows.length > 25){
+            serverSize = true; 
+            rows.forEach(row => {
+                if(row.id !== undefined){
+                    msg += "name: " + row.User + ", value: " + row.Currency + "\n";
+                }
+            });
+        }
+        else{
+            rows.forEach(row => {
+                if(row.id !== undefined){
+                    userEmbed.fields.push({
+                        name: row.User, 
+                        value: row.Currency,
+                        inline: true
+                    })
+                }
+            });
+        }
     }
     else{
         rows.forEach(row => {
@@ -36,7 +49,7 @@ async function list(message, args, doc){
     }
     
 
-    return message.author.send({embed: userEmbed})
+    return message.author.send(serverSize ? msg : {embed: userEmbed})
         .then(() => {
             if (message.channel.type === 'dm') return;
             message.reply('I\'ve sent you a DM!');
