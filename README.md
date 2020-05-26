@@ -9,13 +9,16 @@ Discord bot that manages user currency with a google spreadsheet database.
       5. You'll receive a **_client_secret.json_** file which you'll need to put with your project files
       6. Create a new google spreadsheets doc
       7. Share your doc with your **_client_email_** found in your **_client_secret.json_**
-      7. Set your table headers as these: 
+      8. Set your table headers as these: 
+      <img width="497" alt="table header" src="https://user-images.githubusercontent.com/23638848/82854847-a1ec5a00-9ed7-11ea-9c1c-63cec959082e.png">
       
    2. Create a .env file and set these variables: <br>
       1. Your Discord Bot Login Token
           * `TOKEN=<Discord_Login_Token>`
       2. Your Google Spreadsheet Token
           * `SHEET_TOKEN=<Google_Sheets_Token>` 
+          * _Example:_
+      <img width="964" alt="token" src="https://user-images.githubusercontent.com/23638848/82854828-900ab700-9ed7-11ea-909c-800891abbf98.png">
 
 # Dependencies 
   1. Dotenv(https://www.npmjs.com/package/dotenv)
@@ -32,3 +35,15 @@ Discord bot that manages user currency with a google spreadsheet database.
 | `!transfer @user... <amount>` | Transfers money from your wallet to one/multiple users |
 | `!update @user... <currency_amt>` | change one/multiple user's currency amt |
 | `!wallet` | shows how much you have in your wallet |
+
+# Showcase
+_*User is a placeholder for your discord username_
+1. Database Example
+<img width="497" alt="database example" src="https://user-images.githubusercontent.com/23638848/82854854-a6b10e00-9ed7-11ea-83d5-dcfd7938750f.png">
+
+2. Bank
+<img width="419" alt="command" src="https://user-images.githubusercontent.com/23638848/82854873-b0d30c80-9ed7-11ea-945b-c82678c25e2b.png">
+<img width="331" alt="bank" src="https://user-images.githubusercontent.com/23638848/82854867-ac0e5880-9ed7-11ea-96a4-f4859c5ccfe0.png">
+
+3. Wallet
+<img width="332" alt="wallet" src="https://user-images.githubusercontent.com/23638848/82854881-b6305700-9ed7-11ea-81ca-444b2d2a826a.png">
