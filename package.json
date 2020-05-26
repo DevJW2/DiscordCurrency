@@ -1,0 +1,13 @@
+{
+  "name": "discord-currency",
+  "version": "1.0.0",
+  "description": "manages currency for a server",
+  "main": "index.js",
+  "author": "Jeffrey Weng",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.0.1",
+    "dotenv": "^8.2.0",
+    "google-spreadsheet": "^3.0.11"
+  }
+}
