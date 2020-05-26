@@ -19,6 +19,9 @@ Discord bot that manages user currency with a google spreadsheet database.
           * `SHEET_TOKEN=<Google_Sheets_Token>` 
           * _Example:_
       <img width="964" alt="token" src="https://user-images.githubusercontent.com/23638848/82854828-900ab700-9ed7-11ea-909c-800891abbf98.png">
+   3. Running the bot
+      1. `npm install`
+      2. `node index.js`
 
 # Dependencies 
   1. Dotenv(https://www.npmjs.com/package/dotenv)
