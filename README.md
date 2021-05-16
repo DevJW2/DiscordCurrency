@@ -5,11 +5,13 @@ Discord bot that manages user currency with a google spreadsheet database.
   1. Setup your Google Spreadsheets Database
       1. Go to https://console.developers.google.com/
       2. Create a new project and select **ENABLE APIS AND SERVICES**
-      3. Select Google spreadsheets and setup your credentials
-      5. You'll receive a **_client_secret.json_** file which you'll need to put with your project files
-      6. Create a new google spreadsheets doc
-      7. Share your doc with your **_client_email_** found in your **_client_secret.json_**
-      8. Set your table headers as these: 
+      3. Select Google spreadsheets and setup your [credentials](#credentials)
+      5. You'll receive a **_.json_** file which you'll need to put with your project files (You can rename it to **client_secret.json**)
+         * If you don't get a .json file, select the service account from the account listing. 
+         * Go to the keys tab and click Add Key --> Create Key --> JSON
+      7. Create a new google spreadsheets doc
+      8. Share your doc with your **_client_email_** found in your **_client_secret.json_**
+      9. Set your table headers as these: 
       <img width="497" alt="table header" src="https://user-images.githubusercontent.com/23638848/82854847-a1ec5a00-9ed7-11ea-9c1c-63cec959082e.png">
       
    2. Create a .env file and set these variables: <br>
@@ -22,6 +24,22 @@ Discord bot that manages user currency with a google spreadsheet database.
    3. Running the bot
       1. `npm install`
       2. `node index.js`
+
+# Credentials
+  1. Which API are you using? 
+      * **Google Sheets API**
+  2. Where will you be calling the API from? 
+      * **Web server**
+  3. What data will you be accessing? 
+      * **Application Data**
+  4. Are you planning to use this API with App Engine or Compute Engine? 
+      * **No**
+  5. Create your own service account name
+  6. Role should be: **Editor**
+  7. If asked for key type select: **JSON**
+  8. Don't fill out Optional
+  9. Create Credential
+
 
 # Dependencies 
   1. Dotenv(https://www.npmjs.com/package/dotenv)
